@@ -1,0 +1,51 @@
+﻿
+@{
+    ViewBag.Title = "GetReport";
+}
+
+<table class="responsive-table highlight">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>My License Plate</th>
+            <th>Date of Accident</th>
+            <th>Address of Accident</th>
+            <th>City of Accident</th>
+            <th>Zip Code of Accident</th>
+            <th>Description</th>
+            <th>Image of Accident</th>
+            <th>Name of 3rd party:</th>
+            <th>Plate Number</th>
+            <th>Insurance</th>
+            <th>Policy Number</th>
+            <th>Shop</th>
+            <th>Lowest Cost</th>
+            <th>Highest Cost</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        @foreach (var anItem in ViewBag.ListOfReport)
+        {
+            <tr>
+                <td>@anItem.RId</td>
+                <td>@anItem.UserPlate</td>
+                <td>@anItem.RDate</td>
+                <td>@anItem.RAddress</td>
+                <td>@anItem.RCity</td>
+                <td>@anItem.RZip</td>
+                <td>@anItem.RDesc</td>
+                <td><a href="~/Content/Images/@anItem.Image">@anItem.Image</a></td>
+                <td>@anItem.RName</td>
+                <td>@anItem.RPlate</td>
+                <td>@anItem.RInsurance</td>
+                <td>@anItem.RPolNum</td>
+                <td>@anItem.RShop</td>
+                <td>@anItem.RMin</td>
+                <td>@anItem.RMax</td>
+
+            </tr>
+        }
+    </tbody>
+</table>
+

@@ -1,0 +1,51 @@
+﻿
+@{
+    ViewBag.Title = "InsertReport";
+}
+
+<div class="center">
+    <h5>We have you covered, and Safe!</h5>
+    <p>Please Print or Screenshot</p>
+
+</div>
+<div class=" row valign-wrapper">
+    <div class="col s6 offset-s4 valign">
+        <div class="card-panel hoverable" style="width: 548px;">
+            <div class="card-image">
+                <img src="https://i.pinimg.com/originals/88/65/f6/8865f6bf7ee990d02f5275dde51b33ee.jpg" class="responsive-img" />
+            </div>
+            <div class="card-content">
+                @User.Identity.Name Report:
+                <div >
+                    <h5 class="center-align">
+                        Accident Description:
+                    </h5>
+                        <p>My License Plate: @ViewBag.UserPlate</p>
+                        <p>Date: @ViewBag.RDate</p>
+                        <p>Description: @ViewBag.RDesc</p>
+                        <p>Image: @ViewBag.Image</p>
+                        
+                    
+
+                    <h5 class="center-align">@ViewBag.RName Information</h5>
+                    <p>Name: @ViewBag.RName</p>
+                    <p>@ViewBag.RName Plates: @ViewBag.RPlate</p>
+                    <p>@ViewBag.RName Insurance: @ViewBag.RInsurance</p>
+                    <p>@ViewBag.RName Policy Number: @ViewBag.RPolNum</p>
+                   
+                   
+                </div>
+
+
+            </div>
+            <div class="card-action center-align">
+                <a href="/Home" class="waves-effect waves-light btn black">Return Home</a>
+                <a href="https://www.dmv.org/insurance/how-to-track-a-car-insurance-claim.php" class="waves-effect waves-light btn green">Next Steps</a>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+

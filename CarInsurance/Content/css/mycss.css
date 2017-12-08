@@ -1,0 +1,19 @@
+﻿.tabs .tab a.active {
+    color: #0094ff;
+}
+
+.tabs .tab a:hover {
+    color: #0026ff;
+}
+
+.tabs .tab a {
+    color: #0026ff;
+}
+
+#BB {
+    
+    margin-top: 150px;
+    background-color: #ffffff;
+    border: 1px solid black;
+    opacity: 0.6;
+}

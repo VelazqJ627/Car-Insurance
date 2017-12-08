@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="~/Content/css/materialize.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/css/mycss.css" rel="stylesheet" type="text/css" />
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+
+
+</head>
+<body>
+
+    <header>
+        <div class="navbar-fixed ">
+            <nav class=" blue darken-4">
+                <div class="nav-wrapper container">
+                    <a href="/Home" class="brand-logo center white-text">Auto-Tracker</a>
+                    <ul class="right hide-on-med-and-down white-text">
+
+                        <li><a href="#" class="white-text">@Html.Partial("_LoginPartial")</a></li>
+                    </ul>
+
+
+                    
+                        <a href="#" data-activates="slide-out" class="button-collapse show-on-large">Menu</a>
+
+                    
+                </div>
+            </nav>
+        </div>
+        <ul id="slide-out" class="side-nav">
+            <li><a href="/Home/InsertReportForm">Submit a Report</a></li>
+            <li><a href="/Home/ReportDetail">My Reports</a></li>
+@if (User.IsInRole("Admin"))
+{
+            <li><a href="#">ADMIN TOOLS</a></li>
+            <li>@Html.ActionLink("Role Manager", "Index", "Roles")</li>
+            <li><a href="/Home/GetReport">View All Accidents</a></li>
+}
+
+        </ul>
+    </header>
+
+
+    @RenderBody()
+    <hr />
+    <div class="container">
+        <footer>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts", required: false)
+    <script src="~/Content/js/init.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+</body>
+
+</html>
